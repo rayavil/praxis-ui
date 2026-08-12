@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { BASE } from '../lib/base';
 
 interface Props {
   title: string;
@@ -9,12 +10,12 @@ interface Props {
 const { title, description = 'Praxis UI — base de conocimiento y skill de UI/UX para IAs.' } = Astro.props;
 
 const nav = [
-  { href: `${import.meta.env.BASE_URL}`, label: 'Inicio' },
-  { href: `${import.meta.env.BASE_URL}skill/`, label: 'SKILL.md' },
-  { href: `${import.meta.env.BASE_URL}rules/01-principios-ux/`, label: '01 · Principios UX' },
-  { href: `${import.meta.env.BASE_URL}rules/02-reglas-ui-vistas/`, label: '02 · UI y Vistas' },
-  { href: `${import.meta.env.BASE_URL}rules/03-tendencias-2026/`, label: '03 · Tendencias 2026' },
-  { href: `${import.meta.env.BASE_URL}rules/04-frontend-tailwind/`, label: '04 · Frontend' },
+  { href: BASE, label: 'Inicio' },
+  { href: `${BASE}skill/`, label: 'SKILL.md' },
+  { href: `${BASE}rules/01-principios-ux/`, label: '01 · Principios UX' },
+  { href: `${BASE}rules/02-reglas-ui-vistas/`, label: '02 · UI y Vistas' },
+  { href: `${BASE}rules/03-tendencias-2026/`, label: '03 · Tendencias 2026' },
+  { href: `${BASE}rules/04-frontend-tailwind/`, label: '04 · Frontend' },
 ];
 ---
 
@@ -29,7 +30,7 @@ const nav = [
   <body class="min-h-screen bg-slate-50 text-slate-900 antialiased">
     <header class="border-b border-slate-200 bg-white sticky top-0 z-10">
       <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-        <a href={import.meta.env.BASE_URL} class="font-semibold text-slate-900">
+        <a href={BASE} class="font-semibold text-slate-900">
           Praxis UI
         </a>
         <nav class="flex flex-wrap gap-x-5 gap-y-1 text-sm">
