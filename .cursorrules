@@ -1,0 +1,15 @@
+# Reglas globales de este repositorio
+
+Este repositorio es "Praxis UI" (UI/UX Design Intelligence Hub): una base de conocimiento de diseño de interfaz que también funciona como Skill para IAs.
+
+Antes de proponer, diseñar o generar código de cualquier UI en este proyecto:
+
+1. Lee `SKILL.md` completo. Define el flujo obligatorio de 4 fases (diagnóstico, layout/jerarquía, patrones/tendencias, código frontend) y no debe saltarse.
+2. Para cada fase, consulta el archivo de reglas correspondiente en `rules/` antes de tomar la decisión de esa fase:
+   - Fase 1 → `rules/01-principios-ux.md`
+   - Fase 2 → `rules/02-reglas-ui-vistas.md`
+   - Fase 3 → `rules/03-tendencias-2026.md`
+   - Fase 4 → `rules/04-frontend-tailwind.md`
+3. Si alguno de esos archivos aún no existe, aplica el criterio experto equivalente y señálalo explícitamente en tu respuesta en vez de inventar una regla y presentarla como si viniera del repositorio.
+
+No propongas estructura de layout ni código sin haber pasado antes por el diagnóstico de usuario/contexto (Fase 1). No uses tendencias visuales (Fase 3) para compensar una jerarquía de información pobre (Fase 2).

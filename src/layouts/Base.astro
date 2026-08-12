@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Praxis UI — base de conocimiento y skill de UI/UX para IAs.' } = Astro.props;
+
+const nav = [
+  { href: `${import.meta.env.BASE_URL}`, label: 'Inicio' },
+  { href: `${import.meta.env.BASE_URL}skill/`, label: 'SKILL.md' },
+  { href: `${import.meta.env.BASE_URL}rules/01-principios-ux/`, label: '01 · Principios UX' },
+  { href: `${import.meta.env.BASE_URL}rules/02-reglas-ui-vistas/`, label: '02 · UI y Vistas' },
+  { href: `${import.meta.env.BASE_URL}rules/03-tendencias-2026/`, label: '03 · Tendencias 2026' },
+  { href: `${import.meta.env.BASE_URL}rules/04-frontend-tailwind/`, label: '04 · Frontend' },
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} · Praxis UI</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900 antialiased">
+    <header class="border-b border-slate-200 bg-white sticky top-0 z-10">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <a href={import.meta.env.BASE_URL} class="font-semibold text-slate-900">
+          Praxis UI
+        </a>
+        <nav class="flex flex-wrap gap-x-5 gap-y-1 text-sm">
+          {nav.map((item) => (
+            <a href={item.href} class="text-slate-600 hover:text-slate-900">
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10">
+      <slot />
+    </main>
+
+    <footer class="border-t border-slate-200 mt-16">
+      <div class="max-w-5xl mx-auto px-6 py-8 text-sm text-slate-500">
+        Generado a partir de <code class="bg-slate-100 px-1.5 py-0.5 rounded">SKILL.md</code> y <code class="bg-slate-100 px-1.5 py-0.5 rounded">rules/</code>. Compilado con Astro + Tailwind y desplegado en GitHub Pages.
+      </div>
+    </footer>
+  </body>
+</html>

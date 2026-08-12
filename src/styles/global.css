@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tipografía de lectura larga para el contenido Markdown renderizado (rules/, SKILL.md) */
+.prose-hub h1 {
+  @apply text-3xl font-bold text-slate-900 mb-4 mt-8;
+}
+.prose-hub h2 {
+  @apply text-2xl font-semibold text-slate-900 mb-3 mt-10 border-b border-slate-200 pb-2;
+}
+.prose-hub h3 {
+  @apply text-lg font-semibold text-slate-800 mb-2 mt-6;
+}
+.prose-hub p {
+  @apply text-slate-700 leading-relaxed mb-4;
+}
+.prose-hub ul {
+  @apply list-disc pl-6 mb-4 text-slate-700 space-y-1;
+}
+.prose-hub li > input[type='checkbox'] {
+  @apply mr-2;
+}
+.prose-hub table {
+  @apply w-full border-collapse mb-6 text-sm;
+}
+.prose-hub th {
+  @apply text-left bg-slate-100 text-slate-600 uppercase text-xs font-medium tracking-wide px-3 py-2 border border-slate-200;
+}
+.prose-hub td {
+  @apply px-3 py-2 border border-slate-200 align-top text-slate-700;
+}
+.prose-hub code {
+  @apply bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded text-sm;
+}
+.prose-hub pre {
+  @apply bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto mb-4;
+}
+.prose-hub blockquote {
+  @apply border-l-4 border-slate-300 pl-4 italic text-slate-600 mb-4;
+}
+.prose-hub a {
+  @apply text-blue-700 underline underline-offset-2 hover:text-blue-900;
+}
+.prose-hub hr {
+  @apply my-8 border-slate-200;
+}
